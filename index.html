@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+    <h1>Enter the number</h1>
+    <input type="text" id="limit">
+    <h1>Enter the number</h1>
+    <input type="text" id="limit2">
+    <button onclick="func()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+       function func(){
+
+       
+       let i = limit;
+        let j = limit2;
+        limit = document.getElementById('limit').value;
+        limit2 = document.getElementById('limit2').value;
+        for(i = limit; i<=limit2;i++){
+            let c=0;
+            for(j=1;j<=i;j++){
+                if(i%j==0){
+                    c++;
+                }
+            }
+            if(c==2){
+                document.getElementById('result').insertAdjacentHTML('beforeend',i+'<br>');
+            }
+        }
+       }
+    </script>
+</body>
+</html>
